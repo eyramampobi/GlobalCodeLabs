@@ -35,26 +35,42 @@ def meteor2(num):
             print ((num-x)*var)
         
 meteor2(8)
-
-#using the for each method
+ 
+ #using the for each method
 def search(word):
     j = 0
     for char in word:
         if char == "a":
-         j = j + 1
+            j = j + 1
         else:
-         j = j
+            j = j
     if j >= 1:
-        print("True")
+        return True
     else:
-        print("False")
-        
-search("bagel")
-
+        return False
+         
+print(search("bagel"))
+     
 #using a contain set method
-def search1(word):
-    print (word.__contains__("a"))
+ def search1(word):
+     return (word.__contains__("a"))
+     
+ print(search1("bagel"))
+
+#function that woks for any letter
+def search2(word, letter):
     
-search1("bagel")
+    return (word.__contains__(letter))
+    
+ print(search2("bagel","f"))
+
+#function that returns true for the presence of s and m
+def search3():
+    var1 = search2("bagel","s")
+    var2 = search2("bagelm","m")
+    
+    return var1 and var2 
+
+print(search3())
         
 
